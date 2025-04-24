@@ -91,3 +91,76 @@ ATAC-seq (Assay for Transposase-Accessible Chromatin using sequencing) provides 
 - Custom scripts written in Python and shell
 
 ---
+
+# 📂 Scripts and Resources Overview
+
+This section outlines the command-line scripts, Python notebooks, and supporting files used across various stages of the thesis. Each folder corresponds to a chapter in the thesis and is organized by programming environment.
+
+---
+
+## CHAPTER 2 – Data Acquisition, Processing, and Alignment
+
+**Bash Scripts:**
+- `data_download.sh`: Script to automate data acquisition.
+- `fastqc_command.sh`: Quality check using FASTQC.
+- `fastp_command.sh`: Read filtering and trimming using FASTP.
+- `bowtie2_command.sh`: Alignment command using Bowtie2.
+- `macs3_command.sh`: Peak calling with MACS3.
+
+---
+
+## CHAPTER 3 – Machine Learning Model Development
+
+**Python Scripts:**
+- `charm_preprocessing.py`: Sequence preprocessing pipeline (ChARM package).
+- `charm_model.py`: ChARM classifier implementation.
+- `train_model.py`: Script to train Random Forest model.
+- `motif_ids_used.txt`: List of motif IDs used as features.
+
+---
+
+## CHAPTER 4 – ChARM Analysis of hg38
+
+**Python Notebooks:**
+- `hicom_regions_processing.ipynb`: Fetch and prepare HiCon regions.
+- `stats_analysis.ipynb`: Jupyter notebook for statistical analysis.
+
+---
+
+## CHAPTER 5 – Functional Annotation of pAERs and pAFRs
+
+**Bash Scripts:**
+- `repeatmasker_command.sh`: RepeatMasker usage for annotation.
+
+**Python Notebooks:**
+- `mutscan_schematic.ipynb`: Visual or analytical workflow for mutation scanning.
+
+---
+
+## CHAPTER 6 – Alu-SINEs and Chromatin Accessibility in Primates
+
+**Bash Scripts:**
+- `fimo_command.sh`: Command used with FIMO for motif scanning.
+
+**Python Scripts:**
+- `fetch_fimo_sequences.py`: Script to extract sequences for FIMO input.
+- `pca_analysis.py`: PCA on motif enrichment, with two types of normalization.
+
+---
+
+## CHAPTER 7 – ChARM-Based Evolutionary Epigenomics
+
+**Files:**
+- `species_repeatmasker_list.txt`: List of species and RepeatMasker IDs used.
+
+---
+
+## CHAPTERS 8 & 9 – Methodology and Conclusion
+
+*No scripts provided yet.*
+
+---
+
+### 📎 Note:
+You can find all these files under the [`/scripts/`](./scripts/) folder of this repository. Each script is commented and organized for reproducibility.
+
