@@ -162,5 +162,5 @@ This section outlines the command-line scripts, Python notebooks, and supporting
 ---
 
 ### 📎 Note:
-You can find all these files under the [`/scripts/`](./scripts/) folder of this repository. Each script is commented and organized for reproducibility.
+You can find all these files under the [`/Scripts/`](./Scripts/) folder of this repository. Each script is commented and organized for reproducibility.
 
