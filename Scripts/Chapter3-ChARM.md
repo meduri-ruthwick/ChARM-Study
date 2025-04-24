@@ -6,8 +6,7 @@ Some scripts related to the ChARM model ( `ChARM-Preprocessing.py`, `ChARM.py`) 
 
 These scripts can be shared upon request for academic purposes. Please contact the author:
 
-**Author:** Meduri Ruthwick | Umashankar Singh
-**Email:** [meduri.ruthwick@iitgn.ac.in] | [usingh@iitgn.ac.in]
+**Author:** Meduri Ruthwick [meduri.ruthwick@iitgn.ac.in] | Umashankar Singh [usingh@iitgn.ac.in]
 
 Please include your **institutional affiliation** and the **purpose of the request**.
 
