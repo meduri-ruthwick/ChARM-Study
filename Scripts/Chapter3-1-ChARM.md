@@ -4,9 +4,9 @@ Some scripts related to the ChARM model ( `ChARM-Preprocessing.py`, `ChARM.py`) 
 
 ## Accessing Confidential Scripts
 
-These scripts can be shared upon request for academic purposes. Please contact the author:
+These scripts can be shared upon request for academic purposes. Please contact the author(s):
 
-**Author:** Meduri Ruthwick [meduri.ruthwick@iitgn.ac.in] | Umashankar Singh [usingh@iitgn.ac.in]
+**Author(s):** Meduri Ruthwick [meduri.ruthwick@iitgn.ac.in] | Umashankar Singh [usingh@iitgn.ac.in]
 
 Please include your **institutional affiliation** and the **purpose of the request**.
 
