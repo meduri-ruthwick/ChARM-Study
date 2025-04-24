@@ -4,7 +4,6 @@
 # Description: The commands in this script handles downloading, preprocessing, alignment, and peak calling for ATAC-seq data.
 
 # 1. Download data from ENA
-echo "📥 Downloading raw data..."
 wget "https://your-ena-link.fastq.gz" -O Read.fastq.gz
 
 # 2. Preprocessing and Adapter Trimming using fastp (v0.23.4)
