@@ -13,7 +13,7 @@
 > Powered by **PARAM Ananta** Supercomputing Cluster 
 
 <p align="center">
-  <img src="https://sympart.github.io/sympart/Images/Logos/HoMeCellLab.png" alt="HoMeCell Lab Logo" height="80"/>
+  <img src="https://drive.google.com/file/d/1xLTh0pogPNiBC2NhFePG7jG2-femVuJz/view?usp=share_link" alt="HoMeCell Lab Logo" height="80"/>
   &nbsp;&nbsp;&nbsp;
   <img src="URL_TO_IITGN_LOGO" alt="IIT Gandhinagar Logo" height="80"/>
 </p>
