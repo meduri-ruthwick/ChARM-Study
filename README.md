@@ -4,7 +4,6 @@
   <img src="https://img.shields.io/badge/Language-Python-blue.svg">
   <img src="https://img.shields.io/badge/Model-RandomForest-success.svg">
   <img src="https://img.shields.io/badge/License-Available%20on%20Request-lightgrey.svg">
-  <img src="https://img.shields.io/badge/Status-Under%20Validation-orange.svg">
   <img src="https://img.shields.io/badge/Made%20with-PARAM%20Ananta-9cf.svg">
   <img src="https://img.shields.io/badge/Institution-IITGN-blueviolet.svg">
 </p>
