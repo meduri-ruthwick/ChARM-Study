@@ -1,166 +1,109 @@
-# ChARM: Cross-Species Prediction of Open Chromatin Regions Using Sequence Features
+# 🧬 ChARM – Chromatin Accessibility Retrospective Model
 
-## 📘 Overview
-
-This repository hosts the scripts, models, and data associated with my M.Tech thesis, which investigates the evolution and sequence determinants of open chromatin regions across vertebrates using human ATAC-seq data. The central goal is to explore whether chromatin accessibility can be inferred from primary DNA sequence alone and how these patterns evolve across species.
-
----
-
-## 📚 Table of Contents
-
-- [Background](#background)
-- [Objective](#objective)
-- [Methodology](#methodology)
-  - [1. Data Collection](#1-data-collection)
-  - [2. Feature Extraction](#2-feature-extraction)
-  - [3. Model Development: ChARM](#3-model-development-charm)
-  - [4. Cross-Species Prediction](#4-cross-species-prediction)
-  - [5. Phylogenetic Analysis](#5-phylogenetic-analysis)
-  - [6. Primate-Specific Alu Analysis](#6-primate-specific-alu-analysis)
-- [Software and Environment](#software-and-environment)
-- [Structure of the Repository](#structure-of-the-repository)
+> A machine learning model for predicting chromatin accessibility from genomic sequence features  
+> Developed by **Meduri Ruthwick** & **Dr. Umashankar Singh** | HoMeCell Lab, IIT Gandhinagar  
+> Powered by **PARAM Ananta** Supercomputing Cluster
 
 ---
 
-## 🧬 Background
+## 📌 Overview
 
-ATAC-seq (Assay for Transposase-Accessible Chromatin using sequencing) provides high-resolution data on open chromatin regions. While extensively used in human and model organisms, understanding the **evolutionary conservation** of chromatin accessibility patterns remains an open question.
-
----
-
-## 🎯 Objective
-
-- Identify sequence-level determinants of chromatin accessibility using ATAC-seq data from humans.
-- Develop a predictive model capable of identifying open chromatin from DNA sequence alone.
-- Extend these predictions across **105 vertebrate genomes** to explore the evolutionary conservation of chromatin openness.
-- Evaluate functional enrichment and evolutionary signals, especially focusing on primate-specific transposons (e.g., **Alu subfamilies**).
+ChARM (Chromatin Accessibility Retrospective Model) is a Random Forest-based machine learning model trained on ATAC-seq data from human HEK293T cells to predict open chromatin regions using **only DNA sequence features**. This approach allows us to explore **chromatin accessibility across 105 vertebrate genomes**, especially for organisms where experimental methods like ATAC-seq are not feasible.
 
 ---
 
-## 🔍 Methodology
+## 🎯 Purpose
 
-### 1. Data Collection
-
-- **ATAC-seq data** for human samples was obtained and high-confidence open chromatin peaks were selected.
-- Corresponding **background regions** (non-accessible chromatin) were also collected for model training.
-
-### 2. Feature Extraction
-
-- Sequence windows around each region were analyzed.
-- Extracted features include:
-  - k-mer frequencies
-  - GC content
-  - Sequence entropy
-  - Repeat content (if available)
-- These were compiled into class 0 (closed chromatin) and class 1 (open chromatin) datasets.
-
-### 3. Model Development: ChARM
-
-- A **Random Forest Classifier** was developed to distinguish between accessible and inaccessible chromatin regions.
-- The model was trained using:
-  - Stratified cross-validation
-  - Feature importance analysis
-- Performance was evaluated using confusion matrices, accuracy, precision, and recall scores.
-
-### 4. Cross-Species Prediction
-
-- The trained model (**ChARM**) was applied to **105 vertebrate genomes**.
-- Predicted open chromatin regions (`pAERs`: **predicted ATAC-Enriched Regions**) were filtered based on model confidence.
-
-### 5. Phylogenetic Analysis
-
-- All true predictions across species were aligned with a phylogenetic framework to trace:
-  - Conserved open regions
-  - Divergence in chromatin patterns
-  - Gain/loss of accessibility traits through evolution
-
-### 6. Primate-Specific Alu Analysis
-
-- Investigated the presence of **Alu subfamilies** within predicted open chromatin regions in **primates**.
-- Assessed the relationship between Alu insertion patterns and predicted chromatin accessibility.
-- Early findings suggest a **subfamily-specific contribution** to functional accessibility in primates.
+Understanding open chromatin across all vertebrates is challenging due to experimental constraints. ChARM enables:
+- Comparative epigenomic analysis without experimental data
+- Insights into chromatin evolution and accessibility landscapes
+- In silico prioritization of accessible genomic regions for validation
 
 ---
 
-## 🛠 Software and Environment
+## 🧠 Features Used in Final Model
 
-- **Python 3.8**
-- `scikit-learn` for model development
-- `numpy`, `pandas`, `matplotlib`, `seaborn` for data processing and visualization
-- Genomic tools: `BEDTools`, `RepeatMasker` (offline), UCSC utilities
-- Custom scripts written in Python and shell
+After experimenting with 80+ feature sets, the final model uses:
+- **GC Skew**
+- **CpG occurrences**
+- **TFBS motif occurrences** (only motifs with >50% GC)
 
----
-
-# 📂 Scripts and Resources Overview
-
-This section outlines the command-line scripts, Python notebooks, and supporting files used across various stages of the thesis. Each folder corresponds to a chapter in the thesis and is organized by programming environment.
+> Trained on ~34,000 sequences (balanced class 0/1)
 
 ---
 
-## CHAPTER 2 – Data Acquisition, Processing, and Alignment
+## ⚙️ Model Specifications
 
-**Bash Scripts:**
-- `data_download.sh`: Script to automate data acquisition.
-- `fastqc_command.sh`: Quality check using FASTQC.
-- `fastp_command.sh`: Read filtering and trimming using FASTP.
-- `bowtie2_command.sh`: Alignment command using Bowtie2.
-- `macs3_command.sh`: Peak calling with MACS3.
-
----
-
-## CHAPTER 3 – Machine Learning Model Development
-
-**Python Scripts:**
-- `charm_preprocessing.py`: Sequence preprocessing pipeline (ChARM package).
-- `charm_model.py`: ChARM classifier implementation.
-- `train_model.py`: Script to train Random Forest model.
-- `motif_ids_used.txt`: List of motif IDs used as features.
+- Algorithm: **Random Forest Classifier**
+- Library: `scikit-learn`
+- Hyperparameter Tuning: `GridSearchCV`
+- Parameters searched:
+  - `n_estimators`: 100, 200, 300
+  - `max_depth`: None, 10, 20, 30
+  - `min_samples_split`: 2, 5, 10
+  - `min_samples_leaf`: 1, 2, 4
+  - `max_features`: sqrt, log2
 
 ---
 
-## CHAPTER 4 – ChARM Analysis of hg38
+## 📊 Performance
 
-**Python Notebooks:**
-- `hicom_regions_processing.ipynb`: Fetch and prepare HiCon regions.
-- `stats_analysis.ipynb`: Jupyter notebook for statistical analysis.
-
----
-
-## CHAPTER 5 – Functional Annotation of pAERs and pAFRs
-
-**Bash Scripts:**
-- `repeatmasker_command.sh`: RepeatMasker usage for annotation.
-
-**Python Notebooks:**
-- `mutscan_schematic.ipynb`: Visual or analytical workflow for mutation scanning.
+- **ROC AUC**: 0.85  
+- **PR AUC**: 0.86  
+- Validated across **11 independent human cell lines**
+- Key Visualizations:
+  - Confusion Matrix
+  - Feature Importance
+  - Permutation Feature Importance
 
 ---
 
-## CHAPTER 6 – Alu-SINEs and Chromatin Accessibility in Primates
+## 🌐 Applications
 
-**Bash Scripts:**
-- `fimo_command.sh`: Command used with FIMO for motif scanning.
-
-**Python Scripts:**
-- `fetch_fimo_sequences.py`: Script to extract sequences for FIMO input.
-- `pca_analysis.py`: PCA on motif enrichment, with two types of normalization.
+- Predicted **putative ATAC-like enriched regions (pAERs)** across 105 vertebrate genomes
+- In-depth analysis performed for **primate genomes**
+- Enables **comparative genomics** and **functional region identification** in species without epigenomic data
 
 ---
 
-## CHAPTER 7 – ChARM-Based Evolutionary Epigenomics
+## 📥 Input & Output
 
-**Files:**
-- `species_repeatmasker_list.txt`: List of species and RepeatMasker IDs used.
+**Input**:  
+- BED file of genomic regions (e.g., ATAC peaks, summit regions)
 
----
-
-## CHAPTERS 8 & 9 – Methodology and Conclusion
-
-*No scripts provided yet.*
+**Output**:  
+- Prediction label (open/closed)
+- Prediction probability
 
 ---
 
-### 📎 Note:
-You can find all these files under the [`/Scripts/`](./Scripts/) folder of this repository. Each script is commented and organized for reproducibility.
+## 📜 License & Access
 
+This repository describes the model and its applications. **Code and models will be available upon request.**
+
+---
+
+## 👤 Authors
+
+- **Meduri Ruthwick**, PhD Scholar, IIT Gandhinagar
+- **Dr. Umashankar Singh**, Associate Professor, IIT Gandhinagar
+
+### 🔬 HoMeCell Lab – Department of Biological Sciences and Engineering
+
+Indian Institute of Technology Gandhinagar, Gujarat, India
+
+---
+
+## 📣 Contact
+
+For code access or collaboration inquiries:\
+📧 [[meduri.ruthwick@iitgn.ac.in](mailto\:meduri.ruthwick@iitgn.ac.in)]\
+🔗 [https://github.com/ruthwick](https://github.com/ruthwick)
+
+---
+
+## 📌 Notes
+
+> This model is part of an ongoing thesis project and is yet to be published. Please cite appropriately when referencing ChARM.
+
+---
