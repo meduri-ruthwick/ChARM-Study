@@ -13,7 +13,7 @@
 
 > A machine learning model for predicting chromatin accessibility from genomic sequence features  
 > Developed by **Meduri Ruthwick** & **Dr. Umashankar Singh** | HoMeCell Lab, IIT Gandhinagar  
-> Powered by **PARAM Ananta** Supercomputing Cluster
+> Powered by **PARAM Ananta** Supercomputing Cluster 
 
 ---
 
@@ -90,7 +90,7 @@ After experimenting with 80+ feature sets, the final model uses:
 
 ## 📜 License & Access
 
-This repository describes the model and its applications. **Code and models will be available upon request.**
+This repository describes the model and its applications. **Code and models will be available upon request.** [Academic purposes only]
 
 ---
 
@@ -108,7 +108,7 @@ Indian Institute of Technology Gandhinagar, Gujarat, India
 ## 📣 Contact
 
 For code access or collaboration inquiries:\
-📧 [[meduri.ruthwick@iitgn.ac.in](mailto\:meduri.ruthwick@iitgn.ac.in)]\
+📧 [[meduri.ruthwick@iitgn.ac.in](mailto\:meduri.ruthwick@iitgn.ac.in) | [usingh@iitgn.ac.in](mailto\:usingh@iitgn.ac.in)]\
 🔗 [https://github.com/ruthwick](https://github.com/ruthwick)
 
 ---
