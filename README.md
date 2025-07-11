@@ -13,11 +13,11 @@
 > Powered by **PARAM Ananta** Supercomputing Cluster 
 
 <p align="center">
-  <img src="https://github.com/Sympart/sympart/blob/main/Images/Logos/HoMeCell%20Lab%20Logo-TP.001.png" alt="HoMeCell Lab Logo" height="80"/>
+  <img src="https://raw.githubusercontent.com/Sympart/sympart/main/Images/Logos/HoMeCell%20Lab%20Logo-TP.001.png" alt="HoMeCell Lab Logo" height="80"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/Sympart/sympart/blob/main/Images/Logos/Final_IITGN-Logo-symmetric-White.png" alt="IIT Gandhinagar Logo" height="80"/>
+  <img src="https://raw.githubusercontent.com/Sympart/sympart/main/Images/Logos/Final_IITGN-Logo-symmetric-White.png" alt="IIT Gandhinagar Logo" height="80"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/Sympart/sympart/blob/main/Images/Logos/ChARM-Logo.001.png" alt="IIT Gandhinagar Logo" height="80"/>
+  <img src="https://raw.githubusercontent.com/Sympart/sympart/main/Images/Logos/ChARM-Logo.001.png" alt="ChARM Logo" height="80"/>
 </p>
 
 ---
