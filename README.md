@@ -1,5 +1,17 @@
 # 🧬 ChARM – Chromatin Accessibility Retrospective Model
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Python-blue.svg">
+  <img src="https://img.shields.io/badge/Model-RandomForest-success.svg">
+  <img src="https://img.shields.io/badge/License-Available%20on%20Request-lightgrey.svg">
+  <img src="https://img.shields.io/badge/Status-Under%20Validation-orange.svg">
+  <img src="https://img.shields.io/badge/Made%20with-PARAM%20Ananta-9cf.svg">
+  <img src="https://img.shields.io/badge/Institution-IITGN-blueviolet.svg">
+</p>
+
+
+# 🧬 ChARM – Chromatin Accessibility Retrospective Model
+
 > A machine learning model for predicting chromatin accessibility from genomic sequence features  
 > Developed by **Meduri Ruthwick** & **Dr. Umashankar Singh** | HoMeCell Lab, IIT Gandhinagar  
 > Powered by **PARAM Ananta** Supercomputing Cluster

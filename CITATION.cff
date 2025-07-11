@@ -8,7 +8,3 @@ authors:
     given-names: Umashankar
     orcid: "0000-0001-8578-8201"
 date-released: 2025-07-10
-abstract: >
-  ChARM is a machine learning model trained on human ATAC-seq data
-  to predict chromatin accessibility in vertebrate genomes using
-  sequence-derived features alone.
