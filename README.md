@@ -15,7 +15,7 @@
 <p align="center">
   <img src="https://github.com/Sympart/sympart/blob/main/Images/Logos/HoMeCell%20Lab%20Logo-TP.001.png" alt="HoMeCell Lab Logo" height="80"/>
   &nbsp;&nbsp;&nbsp;
-  <img src="URL_TO_IITGN_LOGO" alt="IIT Gandhinagar Logo" height="80"/>
+  <img src="https://github.com/Sympart/sympart/blob/main/Images/Logos/Final_IITGN-Logo-symmetric-White.png" alt="IIT Gandhinagar Logo" height="80"/>
 </p>
 
 ---
