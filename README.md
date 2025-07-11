@@ -12,6 +12,12 @@
 > Developed by **Meduri Ruthwick** & **Dr. Umashankar Singh** | HoMeCell Lab, IIT Gandhinagar  
 > Powered by **PARAM Ananta** Supercomputing Cluster 
 
+<p align="center">
+  <img src="https://sympart.github.io/sympart/Images/Logos/HoMeCellLab.png" alt="HoMeCell Lab Logo" height="80"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="URL_TO_IITGN_LOGO" alt="IIT Gandhinagar Logo" height="80"/>
+</p>
+
 ---
 
 ## 📌 Overview
