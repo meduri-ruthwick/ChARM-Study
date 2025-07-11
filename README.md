@@ -8,9 +8,6 @@
   <img src="https://img.shields.io/badge/Institution-IITGN-blueviolet.svg">
 </p>
 
-
-# 🧬 ChARM – Chromatin Accessibility Retrospective Model
-
 > A machine learning model for predicting chromatin accessibility from genomic sequence features  
 > Developed by **Meduri Ruthwick** & **Dr. Umashankar Singh** | HoMeCell Lab, IIT Gandhinagar  
 > Powered by **PARAM Ananta** Supercomputing Cluster 
